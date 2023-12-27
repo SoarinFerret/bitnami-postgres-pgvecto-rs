@@ -19,6 +19,7 @@ In your `values.yaml`:
 ```yaml
 postgressql:
   image:
+    registry: ghcr.io
     repository: soarinferret/bitnami-postgres-pgvecto-rs
     tag: pg14.5-v0.1.13
 ```
