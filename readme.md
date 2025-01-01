@@ -7,7 +7,7 @@ I need this for the immich helm chart - I doubt I will continue to use this long
 I am going to use github actions to publish images on ghcr, and you are welcome to use them, but you are probably better off building your own version to replace the specific image you would like. Use common sense with your image tags (aka, use pg14 on both images). An example:
 
 ```bash
-$ docker built --build-arg="PGVECTORS_TAG=pg14-v0.1.13-amd64" --build-arg="BITNAMI_TAG=14.5.0-debian-11-r6" -t bitnami-postgres-pgvecto-rs .
+$ docker built --build-arg="PGVECTORS_TAG=pg14-v0.2.1-amd64" --build-arg="BITNAMI_TAG=14.5.0-debian-11-r6" -t bitnami-postgres-pgvecto-rs .
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ postgressql:
   image:
     registry: ghcr.io
     repository: soarinferret/bitnami-postgres-pgvecto-rs
-    tag: pg14.5-v0.1.13
+    tag: pg14.5-v0.2.1
 ```
 
 Or `docker-compose.yml`:
@@ -32,5 +32,5 @@ version: '3'
 services:
   db:
     #image: bitnami/postgresql:14.5.0-debian-11-r6
-    image: soarinferret/bitnami-postgres-pgvecto-rs:pg14.5-v0.1.13
+    image: soarinferret/bitnami-postgres-pgvecto-rs:pg14.5-v0.2.1
 ```
